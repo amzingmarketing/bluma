@@ -1,0 +1,46 @@
+/* Responsive images by default */
+img {
+    max-width: 100%;
+}
+
+/* Bludit Plugins */
+.plugin {
+    padding-bottom: 0.1rem;
+}
+
+.plugin-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.plugin ul {
+    list-style: none;
+}
+
+/* Sidebar card */
+.card-sidebar {
+    padding: 15px;
+}
+
+/* Hover page titles */
+.text-dark .title:hover {
+    color: #3273dc;
+}
+
+/* Navbar brand */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* footer social */
+img.nav-svg-icon {
+    width: 1rem;
+    height: 1rem;
+    padding-bottom: 2px;
+}
+
+/* Dark footer */
+footer {
+    background-color: #363636 !important;
+}
