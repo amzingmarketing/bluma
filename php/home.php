@@ -24,7 +24,7 @@
 
         <!-- "Read more" button -->
         <?php if ($page->readMore()) : ?>
-        <a href="<?php echo $page->permalink(); ?>" class='button is-outlined'>Read more</a>
+        <a href="<?php echo $page->permalink(); ?>" class='button is-outlined'><?php echo $Language->get('Read more'); ?></a>
         <?php endif ?>
 
     </div>
@@ -44,16 +44,16 @@
 <?php
 // Previous button
 if (!Paginator::showPrev()) {
-    echo '<a class="pagination-previous" disabled>« Previous</a>';
+    echo '<a class="pagination-previous" disabled>« ' . $Language->get('Previous') . '</a>';
 } else {
-    echo '<a class="pagination-previous" href="' . Paginator::prevPageUrl() .'">« Previous</a>';
+    echo '<a class="pagination-previous" href="' . Paginator::prevPageUrl() .'">« ' . $Language->get('Previous') . '</a>';
 }
 
 // Next button
 if (!Paginator::showNext()) {
-    echo '<a class="pagination-next" disabled>Next »</a>';
+    echo '<a class="pagination-next" disabled>' . $Language->get('Next') . ' »</a>';
 } else {
-    echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() .'">Next »</a>';
+    echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() .'">' . $Language->get('Next') . ' »</a>';
 }
 ?>
 </nav>
