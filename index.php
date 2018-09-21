@@ -48,7 +48,7 @@
 
     <!-- Javascript -->
     <?php
-        // echo Theme::jquery();
+    // echo Theme::jquery();
     ?>
 
     <!-- Load Bludit Plugins: Site Body End -->
