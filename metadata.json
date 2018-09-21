@@ -2,9 +2,9 @@
 	"author": "Anaggh S",
 	"email": "",
 	"website": "",
-	"version": "2.3.4",
+	"version": "3.0",
 	"releaseDate": "2018-09-21",
 	"license": "MIT",
-	"compatible": "2.3",
+	"compatible": "3.0",
 	"notes": ""
 }

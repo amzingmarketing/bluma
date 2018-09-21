@@ -39,14 +39,14 @@
 <?php endforeach ?>
 
 <!-- Pagination -->
-<?php if (Paginator::amountOfPages()>1) : ?>
+<?php if (Paginator::numberOfPages()>1) : ?>
 <nav class="pagination" role="navigation" aria-label="pagination">
     <?php
     // Previous button
     if (!Paginator::showPrev()) {
         echo '<a class="pagination-previous" disabled>« ' . $Language->get('Previous') . '</a>';
     } else {
-        echo '<a class="pagination-previous" href="' . Paginator::prevPageUrl() .'">« ' . $Language->get('Previous') . '</a>';
+        echo '<a class="pagination-previous" href="' . Paginator::previousPageUrl() .'">« ' . $Language->get('Previous') . '</a>';
     }
 
     // Next button
