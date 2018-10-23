@@ -17,14 +17,14 @@
         </a>
 
         <!-- Creation date -->
-        <h6><?php echo $page->date(); ?> - <?php echo $Language->get('Reading time') . ': ' . $page->readingTime(); ?></h6>
+        <h6><?php echo $page->date(); ?> - <?php echo $L->get('Reading time') . ': ' . $page->readingTime(); ?></h6>
 
         <!-- Content Break -->
         <?php echo $page->contentBreak(); ?>
 
         <!-- "Read more" button -->
         <?php if ($page->readMore()) : ?>
-        <a href="<?php echo $page->permalink(); ?>" class='button is-outlined'><?php echo $Language->get('Read more'); ?></a>
+        <a href="<?php echo $page->permalink(); ?>" class='button is-outlined'><?php echo $L->get('Read more'); ?></a>
         <?php endif ?>
 
     </div>
@@ -44,16 +44,16 @@
     <?php
     // Previous button
     if (!Paginator::showPrev()) {
-        echo '<a class="pagination-previous" disabled>« ' . $Language->get('Previous') . '</a>';
+        echo '<a class="pagination-previous" disabled>« ' . $L->get('Previous') . '</a>';
     } else {
-        echo '<a class="pagination-previous" href="' . Paginator::previousPageUrl() .'">« ' . $Language->get('Previous') . '</a>';
+        echo '<a class="pagination-previous" href="' . Paginator::previousPageUrl() .'">« ' . $L->get('Previous') . '</a>';
     }
 
     // Next button
     if (!Paginator::showNext()) {
-        echo '<a class="pagination-next" disabled>' . $Language->get('Next') . ' »</a>';
+        echo '<a class="pagination-next" disabled>' . $L->get('Next') . ' »</a>';
     } else {
-        echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() .'">' . $Language->get('Next') . ' »</a>';
+        echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() .'">' . $L->get('Next') . ' »</a>';
     }
     ?>
 </nav>

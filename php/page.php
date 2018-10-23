@@ -17,7 +17,7 @@
 
         <?php if (!$page->isStatic() && !$url->notFound()) : ?>
         <!-- Creation date -->
-        <h6><?php echo $page->date(); ?> - <?php echo $Language->get('Reading time') . ': ' . $page->readingTime() ?></h6>
+        <h6><?php echo $page->date(); ?> - <?php echo $L->get('Reading time') . ': ' . $page->readingTime() ?></h6>
         <?php endif ?>
 
         <!-- Full content -->
