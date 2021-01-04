@@ -1,3 +1,9 @@
+<?php if (empty($content)) : ?>
+    <div class="mt-4">
+    <?php $language->p('No pages found') ?>
+    </div>
+<?php endif ?>
+
 <?php foreach ($content as $page) : ?>
 <!-- Post -->
 <div class='content'>
@@ -13,7 +19,7 @@
     <div>
         <!-- Title -->
         <a class="text-dark" href="<?php echo $page->permalink(); ?>">
-            <h1 class="title"><?php echo $page->title(); ?></h2>
+            <h2 class="title"><?php echo $page->title(); ?></h2>
         </a>
 
         <!-- Creation date -->
@@ -39,21 +45,21 @@
 <?php endforeach ?>
 
 <!-- Pagination -->
-<?php if (Paginator::numberOfPages()>1) : ?>
-<nav class="pagination" role="navigation" aria-label="pagination">
+<?php if (Paginator::numberOfPages() > 1) : ?>
+<nav class="pagination" aria-label="pagination">
     <?php
     // Previous button
     if (!Paginator::showPrev()) {
         echo '<a class="pagination-previous" disabled>« ' . $L->get('Previous') . '</a>';
     } else {
-        echo '<a class="pagination-previous" href="' . Paginator::previousPageUrl() .'">« ' . $L->get('Previous') . '</a>';
+        echo '<a class="pagination-previous" href="' . Paginator::previousPageUrl() . '">« ' . $L->get('Previous') . '</a>';
     }
 
     // Next button
     if (!Paginator::showNext()) {
         echo '<a class="pagination-next" disabled>' . $L->get('Next') . ' »</a>';
     } else {
-        echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() .'">' . $L->get('Next') . ' »</a>';
+        echo '<a class="pagination-next" href="' . Paginator::nextPageUrl() . '">' . $L->get('Next') . ' »</a>';
     }
     ?>
 </nav>

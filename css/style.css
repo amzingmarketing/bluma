@@ -1,3 +1,12 @@
+/* System font family from Bootstrap v5 */
+* {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+code, pre {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
 /* Responsive images by default */
 img {
     max-width: 100%;
@@ -41,6 +50,6 @@ img.nav-svg-icon {
 }
 
 /* Dark footer */
-footer {
+.footer {
     background-color: #363636 !important;
 }

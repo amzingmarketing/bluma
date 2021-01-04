@@ -12,7 +12,7 @@
     <div>
         <!-- Title -->
         <a class="text-dark" href="<?php echo $page->permalink(); ?>">
-            <h1 class="title"><?php echo $page->title(); ?></h1>
+            <h2 class="title"><?php echo $page->title(); ?></h2>
         </a>
 
         <?php if (!$page->isStatic() && !$url->notFound()) : ?>

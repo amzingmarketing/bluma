@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="<?php echo Theme::lang() ?>">
 <head>
-<?php include(THEME_DIR_PHP.'head.php'); ?>
+<?php include(THEME_DIR_PHP . 'head.php'); ?>
 </head>
 <body>
 
@@ -9,7 +9,7 @@
     <?php Theme::plugins('siteBodyBegin'); ?>
 
     <!-- Navbar -->
-    <?php include(THEME_DIR_PHP.'navbar.php'); ?>
+    <?php include(THEME_DIR_PHP . 'navbar.php'); ?>
 
     <!-- Content -->
     <section class="section">
@@ -27,16 +27,16 @@
             // If the user is watching a particular page/post the variable takes the value "page"
             // If the user is watching the frontpage the variable takes the value "home"
             if ($WHERE_AM_I == 'page') {
-                include(THEME_DIR_PHP.'page.php');
+                include(THEME_DIR_PHP . 'page.php');
             } else {
-                include(THEME_DIR_PHP.'home.php');
+                include(THEME_DIR_PHP . 'home.php');
             }
             ?>
             </div>
 
             <!-- Right Sidebar -->
             <div class="column">
-            <?php include(THEME_DIR_PHP.'sidebar.php'); ?>
+            <?php include(THEME_DIR_PHP . 'sidebar.php'); ?>
             </div>
 
         </div>
@@ -44,12 +44,13 @@
     </section>
 
     <!-- Footer -->
-    <?php include(THEME_DIR_PHP.'footer.php'); ?>
+    <?php include(THEME_DIR_PHP . 'footer.php'); ?>
 
     <!-- Javascript -->
-    <?php
-    // echo Theme::jquery();
-    ?>
+    <?= Theme::jquery(); ?>
+
+    <!-- JS: Scripts for this theme -->
+    <?php echo Theme::js('js/bulma.js'); ?>
 
     <!-- Load Bludit Plugins: Site Body End -->
     <?php Theme::plugins('siteBodyEnd'); ?>
